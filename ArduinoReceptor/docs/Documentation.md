@@ -22,7 +22,7 @@ Here we can visualize the setup of the sensors on the breadboard. The sensors ar
     - Echo: Pin I/O 9
     - GND: Arduino GND 
 
-![Arduino Setup with HC-SR05](resources\ArduinoSetup.png)
+![Arduino Setup with HC-SR05](.\resources\ArduinoSetup.png)
 This setup uses an arduino uno and two HC-SR04 sensors.
 The setup should be similiar with arduino due and HC-SR05 sensors. We can observe three green LEDs which indicate where the car should go, and one red LED which indicates that the car should stop. The LEDs are connected to the arduino using the following pins:
  - Green LEDs: Pin I/O 2, 3, 4
