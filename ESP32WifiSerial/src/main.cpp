@@ -9,8 +9,8 @@
 
 HardwareSerial SerialPort(2);
 
-const char* ssid = "NOS-F5C4";
-const char* password = "MGRYFHFQ";
+const char* ssid = "Redmi12C";
+const char* password = "esp32pass";
 
 const int ledPin = 2;
 const int ESP32Baud = 115200;
@@ -60,10 +60,18 @@ void handleWebSocketMessage(void *arg, uint8_t *data, size_t len) {
                 break;
             case MODE:
                 if (value == 0) {
-                    SerialPort.printf("M0\n");
+                    // Just to make sure mode is switched
+                    for (int i = 0; i <= 5; i++) {
+                        SerialPort.printf("M0\n");;
+                        delayMicroseconds(10);
+                    }
                     Serial.printf("Mode: 0\n");
                 } else if (value >= 1) {
-                    SerialPort.printf("M1\n");
+                    // Just to make sure mode is switched
+                    for (int i = 0; i <= 5; i++) {
+                        SerialPort.printf("M1\n");;
+                        delayMicroseconds(10);
+                    }
                     Serial.printf("Mode: 1\n");
                 } 
                 break;
@@ -111,6 +119,7 @@ void setup() {
     digitalWrite(ledPin, LOW);
 
     Serial.printf("Current URL Address: ws://%s%s\n", WiFi.localIP().toString().c_str(), ws.url());
+    SerialPort.printf("Current URL Address: ws://%s%s\n", WiFi.localIP().toString().c_str(), ws.url());
 
     initWebSocket();
 
