@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">03RController</string>
+    <string name="automatic_mode">Automatic Mode</string>
+    <string name="turn">Turn</string>
+    <string name="speed">Speed</string>
+    <string name="submit">Submit</string>
+    <string name="websocket_url">WebSocket URL</string>
+    <string name="connect">Connect</string>
+</resources>

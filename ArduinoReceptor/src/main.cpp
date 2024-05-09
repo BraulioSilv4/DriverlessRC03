@@ -165,3 +165,20 @@ char * receiveFromROS2() {
   // This function will receive data from the ROS2 system.
   return "Hello";
 }
+
+// #include <Arduino.h>
+
+// void setup() {
+//   Serial.begin(115200);   // initialise serial monitor port
+//   while (!Serial) {
+//       ; // wait for serial port to connect. Needed for native USB port only
+//     }  
+//   Serial1.begin(9600);  // initialise Serial1
+//   Serial.println();
+//   Serial.write("Arduino MKRFOX Serial1 test -  for loopback test connect pin 13 to pin 14\n");
+// }
+
+// void loop() {
+//   if (Serial1.available())        // read from Serial1 output to Serial
+//     Serial.write(Serial1.read());
+// }
